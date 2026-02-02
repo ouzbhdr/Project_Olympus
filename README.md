@@ -5,6 +5,14 @@ Infrastructure for a mid-level trading bot system.
 ##⚡ Project Olympus: Modular Algo-Trading Framework
 Project Olympus is a professional-grade, modular algorithmic trading skeleton built with Python and Streamlit. Designed for the OKX exchange (Futures/Swap), it decouples strategy logic from execution, providing a robust environment for backtesting, optimization, and live trading.
 
+The software provided in "Project Olympus" is for educational and research purposes only. 
+Trading cryptocurrencies involves significant risk and can result in the loss of your entire capital. 
+
+* **Not Financial Advice:** The developers of this project are not financial advisors. 
+* **Use at Your Own Risk:** Backtest results do not guarantee future performance. 
+* **No Liability:** The authors and contributors shall not be held liable for any financial losses incurred through the use of this software. 
+Always perform your own due diligence and never trade with money you cannot afford to lose.
+
 ## 🏗️ Architecture (The Gods of Olympus)
 The project is divided into specialized modules named after Greek deities:
 
