@@ -64,6 +64,16 @@ pip install -r requirements.txt
 
 streamlit run aether.py
 ```
+🏛️ Architectural Inspiration & Credits
+The modular architecture and "ecosystem" philosophy of Project Olympus were inspired by the work of Melih Tuna and his comprehensive study, Trade Bot Ekosistemim.
+The following core principles from his ecosystem model have been integrated into this framework:
+Decoupled Task Management: Isolation of scanning (Hekate/Aether), hunting (Odysseus/Zeus), and execution (Orion) processes to ensure system stability.
+Fault Tolerance: A design where each module operates independently, allowing the system to resume seamlessly after any interruption.
+Transparent Monitoring: Real-time tracking of decision-making logic via a "Watcher" (Aether Dashboard) interface.
+You can explore the original inspiration and source materials here:
 
+Medium Article: https://medium.com/@a.melihtuna/trade-bot-ekosistemim-c1698177272c
+GitHub Repository: melihtuna/trade-bot-ekosistemim 
+https://github.com/melihtuna/trade-bot-ekosistemim/tree/master
 
 
