@@ -32,27 +32,26 @@ Hedge Mode Support: Fully compatible with OKX's two-way position mode.
 
 Execution Safety: Built-in precision handling and error catching for orders.
 
-🧠 Creating Your Custom Strategy
-Project Olympus uses a dynamic schema system. When you define parameters in odysseus.py, the Aether dashboard automatically generates the corresponding UI elements.
 
-1. Define Your Parameters
-In odysseus.py, update the get_params_schema() method. Supported types are int and float.
+### 🧠 Custom Strategy Configuration
 
+To add your own parameters, update `odysseus.py` using this syntax:
+
+```python
 def get_params_schema(self):
     return {
-        "fast_ma": {"label": "Fast MA Period", "type": "int", "default": 14, "min": 5, "max": 50},
-        "slow_ma": {"label": "Slow MA Period", "type": "int", "default": 50, "min": 20, "max": 200},
-        "threshold": {"label": "Signal Threshold", "type": "float", "default": 0.05, "step": 0.01}
+        "fast_ma": {"label": "Fast MA Period", "type": "int", "default": 14},
+        "slow_ma": {"label": "Slow MA Period", "type": "int", "default": 50}
     }
+```
 
 2. Implement the Logic
 Update the calculate(self, df) method. Your logic must populate these 3 columns for the backtester and live bot to work:
-
+```python
 df['signal']: 1 (Long), -1 (Short), 0 (None)
-
 df['sl_price']: Stop loss price for the position.
-
 df['tp_price']: Take profit price for the position.
+```
 
 3. Automatic Integration
 Once saved, restart the dashboard. You will see your new parameters under the "Strategy Parameters" section in both Strategy Lab and Grid Search tabs.
