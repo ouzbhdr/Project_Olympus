@@ -226,7 +226,6 @@ with tab1:
     
     # --- GLOBAL FILTERS (CRITICAL FIX) ---
     st.markdown("**🛡️ Global Filters**")
-    # Bu değişkeni aşağıda backtest_run içine gönderiyoruz
     t1_enable_tp = st.checkbox("Enable TP", value=True, key="t1_tp_active")
     
     st.divider()
@@ -261,7 +260,7 @@ with tab1:
                 df_results = tester.calculate(df)
                 
                 # --- CONNECTED TO UI VARIABLE ---
-                # t1_enable_tp buraya bağlandı, artık sonuç değişecek!
+                # 
                 sim_result = backtest_run(
                     df_results, 
                     start_balance=1000, 
