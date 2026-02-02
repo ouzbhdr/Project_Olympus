@@ -1,39 +1,30 @@
 # Project_Olympus
 Infrastructure for a mid-level trading bot system.
+![Python](https://img.shields.io/badge/Python-3.x-blue.svg)
 
-⚡ Project Olympus: Modular Algo-Trading Framework
+##⚡ Project Olympus: Modular Algo-Trading Framework
 Project Olympus is a professional-grade, modular algorithmic trading skeleton built with Python and Streamlit. Designed for the OKX exchange (Futures/Swap), it decouples strategy logic from execution, providing a robust environment for backtesting, optimization, and live trading.
 
-🏗️ Architecture (The Gods of Olympus)
+## 🏗️ Architecture (The Gods of Olympus)
 The project is divided into specialized modules named after Greek deities:
 
-Zeus: The King. Controls the main execution loop and bot life cycle.
+**Zeus**: The King. Controls the main execution loop and bot life cycle.
+**Odysseus**: The Strategist. Contains the trading logic and technical indicators.
+**Orion**: The Hunter. Handles order execution, position management, and exchange connectivity.
+**Mnemosyne**: The Memory. Manages SQLite database for trade logs and performance history.
+**Hekate**: The Seer. Responsible for high-fidelity data fetching and processing.
+**Aether**: The Atmosphere. A high-performance Streamlit dashboard for monitoring and analysis.
+**Hermes**: The Messenger. Delivers real-time notifications via Telegram.
 
-Odysseus: The Strategist. Contains the trading logic and technical indicators.
-
-Orion: The Hunter. Handles order execution, position management, and exchange connectivity.
-
-Mnemosyne: The Memory. Manages SQLite database for trade logs and performance history.
-
-Hekate: The Seer. Responsible for high-fidelity data fetching and processing.
-
-Aether: The Atmosphere. A high-performance Streamlit dashboard for monitoring and analysis.
-
-Hermes: The Messenger. Delivers real-time notifications via Telegram.
-
-🚀 Key Features
-Strategy Lab: Single-asset backtesting with interactive Plotly charts.
-
-Deep Grid Search: Multi-symbol, multi-timeframe parameter optimization with Heatmap visualization.
-
-Dynamic UI: The dashboard automatically generates input fields based on your strategy's schema. You have to figure out what the strategy is yourself.
-
-Hedge Mode Support: Fully compatible with OKX's two-way position mode.
-
-Execution Safety: Built-in precision handling and error catching for orders.
+## 🚀 Key Features
+- Strategy Lab: Single-asset backtesting with interactive Plotly charts.
+- Deep Grid Search: Multi-symbol, multi-timeframe parameter optimization with Heatmap visualization.
+- Dynamic UI: The dashboard automatically generates input fields based on your strategy's schema. You have to figure out what the strategy is yourself.
+- Hedge Mode Support: Fully compatible with OKX's two-way position mode.
+- Execution Safety: Built-in precision handling and error catching for orders.
 
 
-### 🧠 Custom Strategy Configuration
+## 🧠 Custom Strategy Configuration
 
 To add your own parameters, update `odysseus.py` using this syntax:
 
@@ -56,6 +47,15 @@ df['tp_price']: Take profit price for the position.
 3. Automatic Integration
 Once saved, restart the dashboard. You will see your new parameters under the "Strategy Parameters" section in both Strategy Lab and Grid Search tabs.
 
+## 📦 Installation 
+Install requirements. 
+Just run the code.
+
+```bash
+pip install -r requirements.txt
+
 streamlit run aether.py
+```
+
 
 
